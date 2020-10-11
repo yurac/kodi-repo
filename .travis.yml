@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial 
 language: python
 
 python:
@@ -13,6 +13,10 @@ env:
 
 script:
   - bash .github/build.sh
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install jq
 
 branches:
   only:

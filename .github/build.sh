@@ -39,19 +39,13 @@ create_repo_script_url='https://raw.githubusercontent.com/chadparry/kodi-reposit
 create_repository_py='.github/create_repository.py'
 wget -q -t 2 -O "$create_repository_py" "$create_repo_script_url" || curl --retry 2 -o "$create_repository_py" "$create_repo_script_url"
 
-# Download jq
-jq_url='https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64'
-jq_path='.github/jq'
-wget -q -t 2 -O "$jq_path" "$jq_url" || curl --retry 2 -o "$jq_path" "$jq_url"
-chmod +x "$jq_path"
-
 # Iterate through config.json and clone each branch
 # - Generate a repo addon for each branch
 #   - repo addon will include all the branches
 # - Generate a repo set of addons.xml, addons.xml.md5 etc for each branch
-for b in $(cat .github/config.json | .github/jq -c .branchmap[]); do
-    name=$(echo "$b" | .github/jq -r '.name')
-    minversion=$(echo "$b" | .github/jq -r '.minversion')
+for b in $(cat .github/config.json | jq -c .branchmap[]); do
+    name=$(echo "$b" | jq -r '.name')
+    minversion=$(echo "$b" | jq -r '.minversion')
     mkdir -p "$SOURCES_DIR/$name" "$SOURCES_DIR/$datadir"
 
     git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
