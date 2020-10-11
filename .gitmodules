@@ -1,0 +1,3 @@
+[submodule "src/plugin.video.youtube"]
+	path = src/plugin.video.youtube
+	url = https://github.com/yurac/plugin.video.youtube.git

@@ -48,7 +48,8 @@ for b in $(cat .github/config.json | jq -c .branchmap[]); do
     minversion=$(echo "$b" | jq -r '.minversion')
     mkdir -p "$SOURCES_DIR/$name" "$SOURCES_DIR/$datadir"
 
-    git clone --quiet --depth 1 "$REPO" -b "$name" "$SOURCES_DIR/$name"
+    git clone --quiet --depth 50 "$REPO" -b "$name" "$SOURCES_DIR/$name"
+    (cd "$SOURCES_DIR/$name" && git submodule update --init)
 
     python .github/build_repo_addon.py "$REPO_USER" "$REPO_NAME" "$SOURCES_DIR/$name/src/" -t '.github/templates/repo.addon.xml.tmpl' -c '.github/config.json' -d "$DATADIR" --icon '.github/templates/icon.png' --fanart '.github/templates/fanart.jpg'
 
