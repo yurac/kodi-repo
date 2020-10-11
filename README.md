@@ -11,4 +11,4 @@ The following addons are available here:
 - [__Hello World__](main/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``2c72d46``](https://github.com/yurac/kodi-repo/commit/2c72d4681093000a5ac72b3652212960578b3a04)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``7d4161a``](https://github.com/yurac/kodi-repo/commit/7d4161a8f2f44b2beebc08a70cee5e971fbc413c)
