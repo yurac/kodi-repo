@@ -1,16 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.youtube" name="YouTube" provider-name="anxdpanic, bromix" version="6.8.5~beta1">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.5~beta1" provider-name="anxdpanic, bromix">
     <requires>
-        <import addon="xbmc.python" version="2.20.0" />
-        <import addon="script.module.six" version="1.11.0" />
-        <import addon="script.module.requests" version="2.12.4" />
-        <import addon="script.module.inputstreamhelper" optional="true" version="0.2.2" />
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
     </requires>
-    <extension library="resources/lib/default.py" point="xbmc.python.pluginsource">
+    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
         <provides>video</provides>
     </extension>
-    <extension library="resources/lib/startup.py" point="xbmc.service" start="login" />
-    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension point="xbmc.service" library="resources/lib/startup.py" start="login"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
     <extension point="xbmc.addon.metadata">
         <news>
 [fix] notifications for some languages on Kodi 19
@@ -71,55 +71,4 @@
         <source>https://github.com/anxdpanic/plugin.video.youtube</source>
         <reuselanguageinvoker>true</reuselanguageinvoker>
     </extension>
-</addon><addon id="repository.yurac.kodi-repo" name="yurac/kodi-repo Repository" provider-name="yurac" version="1.0.1">
-    <extension point="xbmc.addon.repository">
-        
-        <dir minversion="17.0.0">
-            <info compressed="false">https://yurac.github.io/kodi-repo/main/addons.xml</info>
-            <checksum>https://yurac.github.io/kodi-repo/main/addons.xml.md5</checksum>
-            <datadir zip="true">https://yurac.github.io/kodi-repo/main/datadir/</datadir>
-        </dir>
-
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/yurac/kodi-repo</summary>
-        <description lang="en_GB" />
-        <language />
-        <platform>all</platform>
-        <license>GPL-3.0</license>
-        <forum />
-        <source />
-        <news />
-        <disclaimer />
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart />
-        </assets>
-    </extension>
-</addon><addon id="script.hello.world" name="Hello World" provider-name="zag" version="1.0.1">
-	<requires>
-		<import addon="xbmc.python" version="2.14.0" />
-	</requires>
-	<extension library="addon.py" point="xbmc.python.script">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Popup Hello World</summary>
-		<description lang="en">Example Script to show hello world</description>
-		<license>GNU General Public License, v2</license>
-		<language />
-		<forum>http://forum.kodi.tv/showthread.php?tid=209948</forum>
-		<source>https://github.com/zag2me/script.hello.world</source>
-		<website>Kodi.tv</website>
-		<email>zag@kodi.org</email>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-		</assets>
-		<news>Updated the addon to use new addon.xml metadata</news>
-	</extension>
-</addon></addons>
+</addon>

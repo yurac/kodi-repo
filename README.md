@@ -6,8 +6,9 @@ The following addons are available here:
 
 [__main__](main/addons.xml) (Kodi ver. 17.0.0):
 
+- [__YouTube__](main/datadir/plugin.video.youtube/plugin.video.youtube-6.8.5~beta1.zip) plugin.video.youtube v6.8.5~beta1
 - [__yurac/kodi-repo Repository__](main/datadir/repository.yurac.kodi-repo/repository.yurac.kodi-repo-1.0.1.zip) repository.yurac.kodi-repo v1.0.1
 - [__Hello World__](main/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``2dbab71``](https://github.com/yurac/kodi-repo/commit/2dbab7115609b627935d6c7fe12cc24d4b803d5a)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``2c72d46``](https://github.com/yurac/kodi-repo/commit/2c72d4681093000a5ac72b3652212960578b3a04)
