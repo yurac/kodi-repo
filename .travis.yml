@@ -9,7 +9,7 @@ env:
     # !!! Replace the encryption label below with YOURS
     - ENCRYPTION_LABEL: "189e52c2c347"
     # !!! Replace the email below with YOURS
-    - COMMIT_AUTHOR_EMAIL: "yurac777@gmail.com"
+    - COMMIT_AUTHOR_EMAIL: "yurac@users.noreply.github.com"
 
 script:
   - bash .github/build.sh
